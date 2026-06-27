@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Crime | FBIA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>FBIA Crime Reporting Platform</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="report.html">Report Crime</a></li>
+                <li><a href="track.html">Track Report</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="services">
+    <div class="container">
+
+        <h2>Crime Report Form</h2>
+
+        <form action="api/submit-report.php" method="POST" enctype="multipart/form-data">
+
+            <label>Full Name</label>
+            <input type="text" name="fullname" required>
+
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" name="phone">
+
+            <label>
+                <input type="checkbox" name="anonymous">
+                Submit this report anonymously
+            </label>
+
+            <label>Crime Category</label>
+            <select name="category" required>
+                <option value="">Select Category</option>
+                <option>Cyber Crime</option>
+                <option>Kidnapping</option>
+                <option>Fraud</option>
+                <option>Armed Robbery</option>
+                <option>Human Trafficking</option>
+                <option>Terrorism</option>
+                <option>Corruption</option>
+                <option>Drug Trafficking</option>
+                <option>Other</option>
+            </select>
+
+            <label>Location of Incident</label>
+            <input type="text" name="location" required>
+
+            <label>Date of Incident</label>
+            <input type="date" name="incident_date" required>
+
+            <label>Time of Incident</label>
+            <input type="time" name="incident_time">
+
+            <label>Describe What Happened</label>
+            <textarea name="description" rows="8" required></textarea>
+
+            <label>Upload Evidence (Optional)</label>
+            <input type="file" name="evidence">
+
+            <button class="btn" type="submit">Submit Report</button>
+
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 FBIA Crime Reporting Platform</p>
+    </div>
+</footer>
+
+</body>
+</html>
