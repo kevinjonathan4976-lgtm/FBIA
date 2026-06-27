@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Report | FBIA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>FBIA Crime Reporting Platform</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="report.html">Report Crime</a></li>
+                <li><a href="track.html">Track Report</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="services">
+    <div class="container">
+
+        <h2>Track Your Crime Report</h2>
+
+        <form action="api/track-report.php" method="POST">
+
+            <label>Enter Your Report ID</label>
+
+            <input
+                type="text"
+                name="report_id"
+                placeholder="Example: FBIA-2026-000123"
+                required
+            >
+
+            <button class="btn" type="submit">
+                Check Status
+            </button>
+
+        </form>
+
+        <div class="card" style="margin-top:40px;">
+
+            <h3>Sample Result</h3>
+
+            <p><strong>Report ID:</strong> FBIA-2026-000123</p>
+
+            <p><strong>Status:</strong> Under Investigation</p>
+
+            <p><strong>Assigned Officer:</strong> Investigation Unit</p>
+
+            <p><strong>Last Updated:</strong> 27 June 2026</p>
+
+            <p>
+                <strong>Officer Comment:</strong><br>
+                Your report has been received and assigned to an investigator.
+                We appreciate your cooperation. You will receive updates as the
+                investigation progresses.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 FBIA Crime Reporting Platform. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
