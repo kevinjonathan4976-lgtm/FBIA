@@ -240,3 +240,40 @@ nav a{
 }
 
 }
+
+/* Form Styling */
+
+form{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    max-width:800px;
+    margin:auto;
+}
+
+form label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+form input,
+form select,
+form textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    margin-bottom:15px;
+}
+
+form textarea{
+    resize:vertical;
+}
+
+form button{
+    border:none;
+    cursor:pointer;
+}
